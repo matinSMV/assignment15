@@ -48,7 +48,7 @@ def game_play(message):
 @mybot.message_handler(commands=['age'])
 def Birthday(message):
     a = {}
-    mybot.reply_to(message, 'تاریخ تولد را وارد کن:')
+    mybot.reply_to(message, 'تاریخ تولد را وارد کن:\n مثلا: 1401/1/1')
     mybot.register_next_step_handler(message, age)
 
 
@@ -76,7 +76,7 @@ def converttxtvc(message):
 
 @mybot.message_handler(['max'])
 def input_nums(message):
-    mybot.reply_to(message, 'لیست اعداد رو وارد کن')
+    mybot.reply_to(message, 'لیست اعداد رو وارد کن\nمثلا: 1,2,3,4')
     mybot.register_next_step_handler(message, max_finder)
 
 
@@ -89,7 +89,7 @@ def max_finder(message):
 
 @mybot.message_handler(['argmax'])
 def input_nums(message):
-    mybot.reply_to(message, '')
+    mybot.reply_to(message, 'لیست اعداد رو وارد کن\nمثلا: 1,2,3,4')
     mybot.register_next_step_handler(message, argmax_finder)
 
 
