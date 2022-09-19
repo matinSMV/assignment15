@@ -4,7 +4,7 @@ from khayyam import JalaliDatetime
 from gtts import gTTS
 import qrcode
 
-mybot = telebot.TeleBot("5644935913:AAE4YBHxDDH0cIW7RaPByTJbNjTUfnFwiNg")
+mybot = telebot.TeleBot("*********************************************")
 
 
 @mybot.message_handler(commands=['start'])
