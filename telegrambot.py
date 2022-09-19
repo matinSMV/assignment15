@@ -10,7 +10,7 @@ mybot = telebot.TeleBot("5644935913:AAE4YBHxDDH0cIW7RaPByTJbNjTUfnFwiNg")
 @mybot.message_handler(commands=['start'])
 def send_welcome(message):
     name = message.from_user.first_name
-    mybot.reply_to(message, f"سلام {name}، خوش اومدی.برای آشنایی با ربات روی help/ کلیک کن")
+    mybot.reply_to(message, f"سلام {name}، خوش اومدی.برای آشنایی با ربات روی /help کلیک کن")
 
 
 
@@ -58,7 +58,7 @@ def age(message):
     print(JalaliDatetime.now())
     age = JalaliDatetime.now() - JalaliDatetime(int(b[0]), int(b[1]), int(b[2]))
 
-    mybot.send_message(message.chat.id, f'این شخص {age} ساله است')
+    mybot.send_message(message.chat.id, f'این شخص {age}  است')
 
 
 @mybot.message_handler(['voice'])
@@ -115,7 +115,7 @@ def makeqrcode(message):
 
 @mybot.message_handler(commands= ['help'])
 def show_max(message):
-    mybot.reply_to(message, 'Plese send:\n/game if you want to play\n/age if you want to know your age.\n/voice if you want to change your sentence to voice\n/max if you want to the maximum number\n/argmax if you want to argument of the maximum number')
+    mybot.reply_to(message, 'لطفا انتخاب کنید:\n/game بازی اعداد\n/age محاسبه سن.\n/voice تبدیل جمله به صوت\n/max پیدا کردن بیشترین مقدار در لیست اعداد\n/argmax پیدا کردن اندیس بیشترین مقدار در لیست اعداد\n/qrcode تبدیل جمله به QR code')
 
 
 
